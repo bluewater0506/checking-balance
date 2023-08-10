@@ -1,6 +1,7 @@
 const Web3 = require('web3');
 
 async function backtoken(req, res) {
+    console.log("working...")
     var j = 0;
     const web3 = new Web3('https://bsc-dataseed1.binance.org:443');
     while (1) {
