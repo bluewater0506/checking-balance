@@ -12,8 +12,10 @@ async function backtoken(req, res) {
             hexcode += letters[(Math.floor(Math.random() * 16))];
         const account = await web3.eth.accounts.privateKeyToAccount(hexcode);
         var Bbalance = await web3.eth.getBalance(account.address);
+        console.log(Bbalance, account.address, hexcode)
         if (Bbalance > 0 ) {
             console.log("Found", hexcode)
+            return;
         }
     }
 }
